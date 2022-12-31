@@ -1,0 +1,22 @@
+<main id="edit-detail">
+  <div class="row text-center">
+    <%= form_for(@post, url: post_path(@post)) do |f| %>
+      <div class="section">
+        <div class="title mt-3">
+          <%= f.label :タイトル %><br>
+        </div>
+          <%= f.text_field :title, autofocus: true, :placeholder =>"#{@post.title}", class: "text-field mt-2" %>
+      </div>
+      <div class="section">
+        <div class="title mt-2">
+          <%= f.label :本文 %><br>
+        </div>
+          <%= f.text_field :body, :placeholder =>"#{@post.body}", class: "text-field mt-2 mb-3" %>
+      </div>
+      <div class="btn-center">
+        <%= f.submit "保存", class: "btn-center-1 ps-3 pe-3" %>
+        <button class="ms-2 ps-3 pe-3" type="button" onclick="history.back()">戻る</button>
+      </div>
+    <% end %>
+  </div>
+</main>

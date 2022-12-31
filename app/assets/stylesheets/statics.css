@@ -1,0 +1,137 @@
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+
+
+
+/* statics.how */
+/* habitの全体設定 */
+
+#habit .title {
+  text-align: center;
+  margin: 200px 20px 70px 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#habit h2 {
+  margin: 15px 0px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#habit ul {
+  display: flex;
+  justify-content: space-between;
+}
+#habit li {
+  margin-top: 45px;
+  margin-bottom: 30px;
+  width: 32%;
+  list-style-type: none;
+}
+
+#habit .fa-sharp {
+  display: inline-block;
+  margin: 20px;
+  color: #007bff !important;
+}
+
+#habit li p {
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+/* statics.policy */
+
+.wrapper-2 {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+}
+
+#policy h1 {
+  margin-top: 30px;
+}
+
+#policy h2 {
+  margin: 10px 0px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#policy p {
+  margin: 10px 0px;
+  opacity: 0.6;
+}
+
+
+/* index id="statics-index" */
+
+
+#statics-index .body {
+  text-align: left;
+  font-size: 20px;
+
+
+}
+
+
+#statics-index .inner {
+  background-image: url("/images/IMG_3519.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  margin: auto;
+  padding: 100px 70px;
+  color: white;
+}
+
+#statics-index .inner h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+}
+
+#statics-index .inner p {
+  margin: 30px;
+  }
+
+#statics-index .menu-1 {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 150px;
+}
+
+#statics-index .menu-1 .right{
+  margin-top: 100px;
+}
+
+#statics-index .menu-1 .right p {
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 70px;
+  padding-top: 10px;
+  font-weight: 400px;
+  font-size: 25px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+#statics-index .menu-1 figure {
+  margin-top: 10px;
+  width: 640px;
+  margin-left: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+#statics-index .menu-2 {
+  display: inline-block;
+  padding-bottom: 20px;
+  border-bottom: 3px solid black;
+}

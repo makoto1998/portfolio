@@ -1,0 +1,56 @@
+html {
+  font-size: 100%;
+}
+
+#ヘッダー
+header {
+
+}
+
+.title h1 {
+  margin: 0%;
+  padding: 20px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  text-align: center;
+}
+}
+
+.text-center {
+
+}
+
+.container-2 {
+  width: 700px;
+  height: 400px;
+  margin: auto;
+  background-color: rgb(241, 236, 236);
+
+}
+
+.card-title {
+
+}
+
+.text-center {
+
+}
+
+.card-title {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.image m-4 {
+  margin: 24px;
+}
+
+.card-text {
+
+}
+
+.btn {
+  text-align: end;
+}

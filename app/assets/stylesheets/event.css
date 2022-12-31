@@ -1,0 +1,23 @@
+/* main id="event-index" */
+
+
+#events-index .btn {
+  margin: 10px 100px;
+  text-align: left;
+
+  font-size: 20px;
+  font-weight: 600;
+
+}
+#events-index h2 {
+  margin: 10px 0px;
+}
+
+#events-index .body {
+  margin: 0px 100px;
+}
+
+/* main id="events-new" */
+#events-new {
+  margin: 30px 100px;
+}

@@ -1,0 +1,47 @@
+<div class="box1">
+  <div class="box-inner">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class="row m-auto text-start border pt-3 pb-5 mt-5", style="width: 350px">
+      <div class="col-sm-8 col-md-12">
+        <h1 class="text-strat">新規登録</h1>
+      </div>
+      <div class="box-name mt-3 ">
+        <%= f.label :name, "名前" %><br/>
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+
+      <div class="box-email mt-2">
+        <%= f.label :email, "Eメール" %><br/>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field mt-2">
+        <%= f.label :画像 %><br/>
+        <%= f.file_field :image %>
+      </div>
+
+      <div class="box-password mt-2">
+        <%= f.label :password, "パスワード" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> 文字以上)</em>
+        <% end %><br/>
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="box-password mt-2">
+        <%= f.label :password_confirmation, "パスワード(確認)" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="box-login  mt-3 mb-2">
+        <%= f.submit "新規登録", class: 'btn btn-primary w-100'%>
+      </div>
+      <% end %>
+
+      <div class="box-newusr">
+        <p><span>-------</span> 既に登録されていますか？ <span>------</span></p>
+        <%= link_to "ログイン", new_user_session_path %>
+      </div>
+    </div>
+  </div>
+</div>

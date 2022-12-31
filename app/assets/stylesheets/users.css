@@ -1,0 +1,65 @@
+/* index.html.erb id="mypage" */
+
+#mypage .content {
+  padding: 20px;              /* 余白指定 */
+  /* text-align:  center;        中央寄せ */
+  margin: auto;
+  width: 900px;
+}
+
+#mypage .content .detail {
+  background-color:  rgb(240, 235, 235);
+  border: solid;
+  border-bottom: transparent;
+}
+
+#mypage .icon-image {
+  text-align: left;
+  padding: 20px;
+}
+
+#mypage .icon-image img {
+  border-radius: 50%;
+  padding-bottom: 5px;
+}
+
+#mypage .content .detail-1 {
+  text-align: center;
+  border: solid;
+}
+
+#mypage .content .detail-1 a {
+  padding: 5px;
+}
+
+
+#mypage h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#mypage .content .btn {
+  display: inline-block;
+  margin: 10px 5px;
+  font-weight: 400;
+  text-align: center;
+  border: solid;
+  border-radius: 5px;
+}
+#mypage .content .btn-profile {
+  background-color: rgb(240, 235, 235);
+  border-color: rgb(240, 235, 235);
+}
+
+/* ログアウトボタンいらない */
+/* #mypage .content .btn-logout {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+} */
+
+#mypage .content .btn-new {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}

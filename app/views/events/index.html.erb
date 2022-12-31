@@ -1,0 +1,25 @@
+<main id="events-index">
+  <div class="container">
+    <div class="btn mt-5 p-0 ">
+      <p class="h3 mb-3 text-start"><i class="bi bi-record me-1"></i>行動設定</p>
+      <p class="h5 mb-5"><%= link_to 'カレンダーに行動追加', new_event_path %></p>
+      <p class="h3 mt-3 text-start"><i class="bi bi-flag me-1"></i>目標一覧</p>
+    </div>
+    <div class="row mt-2 mb-5">
+      <% @posts.each do |post| %>
+          <p class="h5 me-3"><%= link_to post.title, "/posts/#{post.id}" %></p>
+      <% end %>
+    </div>
+    <div class="row">
+      <%= month_calendar events: @events do |date, events| %>
+        <%= date.day %>
+
+        <% events.each do |event| %>
+          <div>
+            <%= event.title %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</main>

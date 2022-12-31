@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="posts">
+    <%= form_for(@post, url: '/posts') do |f| %>
+      <h3 class="mt-5">目標</h3>
+      <%= f.text_field :title , class: "mt-2", placeholder: "2月までに3kg痩せる"%><br>
+      <small class="sidebar text-muted ">抽象的な目標ではなく、数値などを入れた具体的な目標にすることで、達成率を上げることができます。</small>
+      <h3 class="mt-5">行動</h3>
+      <%= f.text_field :body , class: "mt-2", placeholder: "毎日朝3㎞ジョギング" %>
+      <small class="sidebar text-muted ms-2">※後から違う行動も追加出来ます</small><br>
+      <small class="sidebar text-muted">
+            毎日できるような、ハードルが低い行動にすると、続けやすいためおすすめです。<br>
+            やる時間なども決めると、行動ができる確率をあげることができます。
+      </small><br>
+      <div class="btn-center mt-3">
+        <%= f.submit '投稿' , class: 'btn-center-1 ps-3 pe-3' %>
+        <button class="ms-2 ps-3 pe-3" type="button" onclick="history.back()">戻る</button>
+      </div>
+    <% end %>
+  </div>
+</div>

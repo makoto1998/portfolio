@@ -14,7 +14,7 @@ Platform:
   darwin arm64
 
 Trace: 
-  SyntaxError: /Users/watanabemakoto/portfolio/hoge/package.json: Unexpected string in JSON at position 85
+  SyntaxError: /Users/watanabemakoto/portfolio/hoge/package.json: Unexpected string in JSON at position 87
       at JSON.parse (<anonymous>)
       at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
       at Generator.next (<anonymous>)
@@ -26,7 +26,11 @@ npm manifest:
     "dependencies": {
       "@popperjs/core": "^2.11.6",
       "bootstrap": "^5.2.3"
-      "license": "UNLICENSED"
+    }
+    "name": "my-package",
+    "scripts": {
+      "build": "babel src -d lib",
+      "test": "jest"
     }
   }
 

@@ -22,9 +22,25 @@
             <a class="fs-6 text-light ms-2" href="/events">行動記録</a>
             <a class="fs-6 text-light ms-2" href="/posts">タイムライン</a>
             <% unless current_user.nil? %>
-            <%= link_to 'マイページ',  user_path(current_user&.id), class: "fs-6 text-light ms-2" %>
+              <%= link_to 'マイページ',  user_path(current_user&.id), class: "fs-6 text-light ms-2" %>
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "fs-6 text-light ms-2" %>
             <% end %>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "fs-6 text-light ms-2" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 d-md-none text-start">
+            <a class="fs-2 text-light" href="/statics/index"><i class="bi bi-house-door m-1"></i>Habit</a>
+          </div>
+          <div class="col-6 dropdown d-md-none">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/events">行動記録</a></li>
+              <li><a class="dropdown-item" href="/posts">タイムライン</a></li>
+              <li><%= link_to 'マイページ',  user_path(current_user&.id), class: "fs-6 ms-3" %></li>
+              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "fs-6 ms-3" %></li>
+            </ul>
           </div>
         </div>
       </header>

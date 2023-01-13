@@ -15,8 +15,11 @@
     <div class="col-md-2">
       <img src=<%= @user.image %> width="100" height="100" class="rounded-circle">
     </div>
-    <div class="col-md-2">
-      <h2 class="m-2"><%= current_user.name %></h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mt-3">
+      <p class="d-none d-md-block h4 fw-bold"><%= current_user.name %></p>
+      <p class="d-md-none m-2 h5 fw-bold"><%= current_user.name %></p>
     </div>
   </div>
 

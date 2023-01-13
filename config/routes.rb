@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'statics/help'      => 'statics#help'
   get 'statics/policy'    => 'statics#policy'
   get 'statics/index'     => 'statics#index'
+  get 'statics/show'      => 'statics#show'
 
   get 'users/new'         => 'users#new'
   get 'users/index'       => 'users#index'

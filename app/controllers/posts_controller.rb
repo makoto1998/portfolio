@@ -6,8 +6,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: 'desc')
-    # @post = Post.find_by(id: params[:id])
-    # @user = User.find_by(id: @post.user_id)
     @user = User.find_by(params[:id])
     @user = current_user
   end
@@ -54,6 +52,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :body).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :body).merge(:user_id, :current_user.id)
   end
 end

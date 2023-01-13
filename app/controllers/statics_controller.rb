@@ -1,8 +1,5 @@
 class StaticsController < ApplicationController
 
-  def how
-  end
-
   def help
   end
 
@@ -10,6 +7,8 @@ class StaticsController < ApplicationController
   end
 
   def index
-    
+  end
+
+  def show
   end
 end

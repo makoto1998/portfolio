@@ -38,12 +38,10 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/events">行動記録</a></li>
               <li><a class="dropdown-item" href="/posts">タイムライン</a></li>
-              <%
-=begin%>
- <li><%= link_to 'マイページ', user_path(current_user&.id), class: "fs-6 ms-3" %></li> #表示するとエラー出ている
-<%
-=end%>
-              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "fs-6 ms-3" %></li>
+              <% unless current_user.nil? %>
+                <li><%= link_to 'マイページ', user_path(current_user&.id), class: "fs-6 ms-3" %></li>
+                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "fs-6 ms-3" %></li>
+              <% end %>
             </ul>
           </div>
         </div>

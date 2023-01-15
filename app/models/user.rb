@@ -9,8 +9,8 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
 
-  has_many :posts, dependent: :destroy, foreign_key: :post_user_id
-  # has_many :events, dependent: :destroy, foreign_key: :event_user_id
+  # has_many :posts, dependent: :destroy, foreign_key: :user_id
+  # has_many :events, dependent: :destroy, foreign_key: :user_id
   has_one_attached :avatar
 
   mount_uploader :image, ImageUploader

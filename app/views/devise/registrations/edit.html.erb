@@ -25,14 +25,10 @@
 
         <!--アカウント編集時にプロフィールを入力できるようにフォームを追加-->
 
-  <%
-=begin%>
- <div class="box-profile  mt-2">
-          <%= f.label :紹介文, "プロフィール" %><br />
-          <%= f.text_field :profile, autofocus: true, class: "textbox" %>
+        <div class="field  mt-2">
+          <%= f.label :紹介文, "プロフィール" %><br/>
+          <%= f.text_area :profile, autofocus: true %>
         </div>
-<%
-=end%>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>

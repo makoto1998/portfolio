@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rooms/show'        => 'rooms#show'
 
   get 'goals/user'        => 'goals#user'
   get 'goals/new'         => 'goals#new'
@@ -31,4 +32,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "sessions#new"
+
+  mount ActionCable.server => '/cable' #バックエンドとフロントエンドをつなぐ
 end

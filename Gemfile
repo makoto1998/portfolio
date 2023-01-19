@@ -10,6 +10,7 @@ gem 'mini_magick'
 gem "cssbundling-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem "sass-rails", "~> 6"
 gem 'sassc'
 gem 'pry-rails'

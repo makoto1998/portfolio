@@ -1,21 +1,23 @@
 Rails.application.routes.draw do
+
+  mount ActionCable.server => '/cable'
+  root to: 'rooms#show'
   get 'rooms/show'        => 'rooms#show'
+
 
   get 'goals/user'        => 'goals#user'
   get 'goals/new'         => 'goals#new'
 
-  # get 'statics/how'       => 'statics#how' 使わない削除予定
   get 'statics/help'      => 'statics#help'
   get 'statics/policy'    => 'statics#policy'
   get 'statics/index'     => 'statics#index'
-  get 'statics/show'      => 'statics#show'
 
   get 'users/new'         => 'users#new'
   get 'users/index'       => 'users#index'
 
   get 'posts/:id/destroy' => 'posts#destroy'
 
-  root to: 'events#index'
+  get 'events/index'      => 'events/index'
   resources :events
 
 
@@ -33,5 +35,4 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "sessions#new"
 
-  mount ActionCable.server => '/cable' #バックエンドとフロントエンドをつなぐ
 end

@@ -19,6 +19,7 @@
         <div class="row">
           <div class="col d-none d-md-block">
             <a class="fs-2 text-light " href="/statics/index"><i class="bi bi-house-door m-1"></i>Habit</a>
+            <a class="fs-6 text-light ms-2" href="/groups">グループ</a>
             <a class="fs-6 text-light ms-2" href="/events">行動記録</a>
             <a class="fs-6 text-light ms-2" href="/posts">タイムライン</a>
             <% unless current_user.nil? %>
@@ -36,6 +37,7 @@
             </a>
 
             <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/groups">グループ</a></li>
               <li><a class="dropdown-item" href="/events">行動記録</a></li>
               <li><a class="dropdown-item" href="/posts">タイムライン</a></li>
               <% unless current_user.nil? %>

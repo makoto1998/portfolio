@@ -10,18 +10,21 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
   },
 
   received(data) {
-    return alert(data['message']);
+    // return alert(data['message']);
+    const messages = document.getElementById('messages');
+    messages.insertAdjacentHTML('beforeend', data['message']);
   },
 
   speak: function(message) {
-    return this.perform('speak', {message: message});
-  }
-});
+    // return this.perform('speak', {message: message});
+    const messages = document.getElementById('messages');
+    messages.insertAdjacentHTML('beforeend', data['message']);
+  },
 
-window.addEventListener("keypress", function(e) {
-  if (e.keyCode === 13) {
-    appRoom.speak(e.target.value);
-    e.target.value = '';
-    e.preventDefault();
+window,document,onkeydown = function(event) {
+  if(event.key == 'Enter') {
+    appRoom.speak(event.target.value);
+    event.target.value = '';
+    event.preventDefault();
   }
-})
+}

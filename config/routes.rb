@@ -21,6 +21,16 @@ Rails.application.routes.draw do
   resources :events
 
 
+  get 'groups/:id/destroy' => 'groups#destroy'
+  resources :groups, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :groups do
+    collection do
+      get "search"
+    end
+  end
+
+
+
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'

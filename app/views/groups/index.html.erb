@@ -1,5 +1,6 @@
 <div class="chat-group">
-　  <h1>チャットグループ一覧</h1>
+  <h1>チャットグループ一覧</h1>
+
     <div class="group-search">
         <div class="group-search-form">
             <%= form_with url: groups_path, local: true, method: :get, class: "search-form" do |f| %>
@@ -37,6 +38,6 @@
 
     </div>
     <div class="user-page">
-        <%= link_to 'ユーザーページへ', current_user %>
+        <%= link_to 'マイページへ', current_user %>
     </div>
 </div>

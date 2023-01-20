@@ -23,6 +23,8 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @messages = Message.all
+    @user = User.find_by(params[:id])
   end
 
   def edit

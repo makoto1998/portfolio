@@ -14,4 +14,11 @@
     <div class="chat-group-show-talk">
         トーク
     </div>
+    <form>
+      <label>Say something:</label><br>
+      <input type="text" data-behavior="room_speaker">
+    </form>
+    <div id ='messages'>
+      <%= @group.user_ids %><%= render @messages %>
+    </div>
 </div>

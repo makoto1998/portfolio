@@ -19,11 +19,11 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   # お試し用
-  def posts
-    Post.where(user_id: self.id)
-  end
+  # def posts
+  #   Post.where(user_id: self.id)
+  # end
 
-  def events
-    Event.where(user_id: self.id)
-  end
+  # def events
+  #   Event.where(user_id: self.id)
+  # end
 end

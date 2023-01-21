@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order(created_at: 'desc')
     @user = User.find_by(params[:id])
-    @user = current_user
+    # @user = current_user
   end
 
   def show

@@ -18,6 +18,12 @@ class UsersController < ApplicationController
     @posts = Post.where(user_id: current_user.id).includes(:user).order("created_at DESC")    #投稿タイトルを表示
   end
 
+  def index
+    @user = User.find_by(params[:id])
+    @posts = Post.where(user_id: current_user.id).includes(:user).order("created_at DESC")    #投稿タイトルを表示
+
+  end
+
   def update
     @user = User.find(params[:id])
     @user.save

@@ -10,16 +10,17 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
   },
 
   received(data) {
-    // return alert(data['message']);
-    const messages = document.getElementById('messages');
-    messages.insertAdjacentHTML('beforeend', data['message']);
+    return alert(data['message']);
+    // const messages = document.getElementById('messages');
+    // messages.insertAdjacentHTML('beforeend', data['message']);
   },
 
   speak: function(message) {
-    // return this.perform('speak', {message: message});
-    const messages = document.getElementById('messages');
-    messages.insertAdjacentHTML('beforeend', data['message']);
-  },
+    return this.perform('speak', {message: message});
+    // const messages = document.getElementById('messages');
+    // messages.insertAdjacentHTML('beforeend', data['message']);
+  }
+});
 
 window,document,onkeydown = function(event) {
   if(event.key == 'Enter') {

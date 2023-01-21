@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
-  root to: 'rooms#index'
+  root to: 'events#index'
   get 'rooms/show'        => 'rooms#show'
 
 
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   # controllers: { registrations: 'users/registrations' }
-  resources :users, only: [:show]
+  resources :users, only: [:show, :index]
 
   resources :posts
 

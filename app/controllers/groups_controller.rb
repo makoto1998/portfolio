@@ -19,12 +19,12 @@ class GroupsController < ApplicationController
     else
       render :new
     end
+    @group.user_ids = current_user.id
   end
 
   def show
     @group = Group.find(params[:id])
     @messages = Message.all
-    @user = User.find_by(params[:id])
   end
 
   def edit

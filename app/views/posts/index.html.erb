@@ -8,8 +8,8 @@
     <div class="row text-center">
       <% @posts.each do |post| %>
         <div class="col">
-          <% if @user.image? %>
-            <a><img src=<%= @user.image %> width="80" height="80" class="rounded-circle"></a>
+          <% if post.user.image? %>
+            <a><img src=<%= post.user.image %> width="80" height="80" class="rounded-circle"></a>
           <% else %>
             <a><%= image_tag ("/images/default_image.PNG"), class: "rounded-circle", width: '80px', height: '80px'  %>
           <% end %></a>

@@ -1,17 +1,17 @@
 
-<div class="group-show">
-    <div class="show-group-chat-back">
-        <span class="group-show-group-chat-back">
-            <%= link_to groups_path do %>
-                ＜
-            <% end %>
-        </span>
+<div class="container group-show">
+  <div class="row show-group-chat-back">
+      <span class="col group-show-group-chat-back mt-2">
+          <%= link_to groups_path do %>
+            ＜
+          <% end %>
+      </span>
+  </div>
+  <div class="row">
+    <div class="col mt-5">
+      <p class="h3"><i class="bi bi-people me-1"></i><%= @group.name %></p>
     </div>
-
-    <div>
-      <p class="h3"><%= @group.name %></p>
-    </div>
-    <div class="chat-group-show-talk">
+    <div class="chat-group-show-talk mt-3">
         トーク
     </div>
     <form>
@@ -21,4 +21,5 @@
     <div id ='messages'>
       <%= @group.user_ids %><%= render @messages %>
     </div>
+  </div>
 </div>

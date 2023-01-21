@@ -1,15 +1,17 @@
-<div class="chat-group">
-  <h1>チャットグループ一覧</h1>
-
+<div class="container chat-group">
+  <div class="row text-center mt-5 mb-5">
+    <h1><i class="bi bi-chat-right-dots me-1"></i>チャットグループ一覧</h1>
+  </div><hr>
+  <div class="row mt-5">
     <div class="group-search">
-        <div class="group-search-form">
+        <div class="group-search-form mb-2">
             <%= form_with url: groups_path, local: true, method: :get, class: "search-form" do |f| %>
                 <%= f.text_field :keyword, placeholder: "グループ検索", class: "group-search-form-input" %>
                 <%= f.submit '検索' %>
             <% end %>
         </div>
-        <div class="group-new">
-            <%= link_to 'グループ作成', new_group_path %>
+        <div class="group-new mb-2 ">
+            <i class="bi bi-person-add me-1"></i><%= link_to 'グループ作成', new_group_path %>
         </div>
 
         <% if @group_joining == [] %>
@@ -37,7 +39,8 @@
         <% end %>
 
     </div>
-    <div class="user-page">
+    <div class="user-page mb-2">
         <%= link_to 'マイページへ', current_user %>
     </div>
+  </div>
 </div>

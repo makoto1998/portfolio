@@ -11,9 +11,12 @@
           <% if post.user.image? %>
             <a><img src=<%= post.user.image %> width="80" height="80" class="rounded-circle"></a>
           <% else %>
-            <a><%= image_tag ("/images/default_image.PNG"), class: "rounded-circle", width: '80px', height: '80px'  %>
-          <% end %></a>
-            <a class="ms-2"><%= link_to post.user.name, users_index_path(@user) %></a>
+            <a><%= image_tag ("/images/default_image.PNG"), class: "rounded-circle", width: '80px', height: '80px'  %></a>
+          <% end %>
+            <a class="ms-2">
+            <%= link_to post.user.name, "/users/#{@user.id}/index" %>
+            </a>
+
         </div>
         <div clss="col">
           <p  class="mt-3 mb-5">目標: <%= link_to post.title, "/posts/#{post.id}" %></p>

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'statics/index'     => 'statics#index'
 
   get 'users/new'         => 'users#new'
-  get 'users/index'       => 'users#index'
+  get 'users/:id/index'   => 'users#index'
 
   get 'posts/:id/destroy' => 'posts#destroy'
 
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   # controllers: { registrations: 'users/registrations' }
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show]
 
   resources :posts
 

@@ -50,7 +50,12 @@
       </header>
 
       <main>
-          <%= yield %>
+        <div class="row m-5">
+          <% flash.each do |message_type, message| %>
+            <p class="h5 ">※<%= message %></p>
+          <% end %>
+        </div>
+        <%= yield %>
       </main>
 
       <footer class="bg-secondary text-center text-light p-4 mt-5">

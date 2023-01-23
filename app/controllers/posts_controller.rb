@@ -13,14 +13,18 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by(id: params[:id])
     @user = User.find_by(id: @post.user_id)
+    @posts = Post.where(user_id: current_user.id).includes(:user).order("created_at DESC")
+    @events = Event.where(user_id: current_user.id)
   end
 
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
+      flash[:success] = "目標を追加しました。"
       redirect_to '/posts/new'
     else
+      flash.now[:danger] = '空では登録できません'
       render :new
     end
   end

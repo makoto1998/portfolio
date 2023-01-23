@@ -1,4 +1,9 @@
 <div class="container">
+  <div class="row m-5">
+    <% flash.each do |message_type, message| %>
+      <p class="h5 ">※<%= message %></p>
+    <% end %>
+  </div>
   <div class="posts">
     <%= form_for(@post, url: '/posts') do |f| %>
       <h3 class="mt-5">目標</h3>

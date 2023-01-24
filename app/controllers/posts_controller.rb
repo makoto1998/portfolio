@@ -14,12 +14,10 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @user = User.find_by(id: @post.user_id)
     @posts = Post.where(user_id: current_user.id).includes(:user).order("created_at DESC")
-    @event = Event.new
-    # Event.create(event_parameter)
+    # @event = Event.new
+    # Event.create
     # redirect_to root_path
     @events = Event.where(user_id:  @post.id)
-
-
   end
 
   def create

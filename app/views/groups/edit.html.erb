@@ -8,6 +8,8 @@
       <div class="gtoup-new-form-name">
         <%= f.label :name, 'グループ名' %>
         <%= f.text_field :name, class: 'form-control mt-2' %>
+        <%= f.label :goal, 'グループ目標' %>
+        <%= f.text_field :goal, class: 'form-control mt-2' %>
         <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
       </div>
       <%= f.submit '更新', class: "btn btn-primary mt-3" %>

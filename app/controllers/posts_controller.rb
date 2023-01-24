@@ -28,8 +28,6 @@ class PostsController < ApplicationController
       flash.now[:danger] = '空では登録できません'
       render :new
     end
-    @event = Event.new
-    # redirect_to root_path
   end
 
   def edit

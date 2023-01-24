@@ -8,10 +8,10 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all.order(created_at: :desc)
-    # @user = User.find(params[:id]) いる？
     @posts = Post.all.order(created_at: 'desc')
-    # @posts = Post.where(user_id: current_user.id).includes(:user).order("created_at DESC")    #投稿
+    @posts = Post.where(user_id: current_user.id).includes(:user).order("created_at DESC")    #投稿タイトルを表示
+    @users = User.all.order(created_at: :desc)
+    @user = User.find_by(id: params[:id])
   end
 
   # マイページ

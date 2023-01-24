@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'users/:id/index'   => 'users#index'
 
   get 'posts/:id/destroy' => 'posts#destroy'
+  get 'posts/:id' => 'posts#show'
 
   get 'events/index'      => 'events/index'
   resources :events

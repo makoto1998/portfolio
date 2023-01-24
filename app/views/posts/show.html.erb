@@ -35,7 +35,6 @@
     <div class="container">
       <div class="row">
         <p class="h2 mt-5 mb-5"><i class="bi bi-record me-1"></i>行動を記録</>
-
         <%= form_with(model: @event, local: true) do |form| %>
 
           <div class="title">
@@ -59,6 +58,7 @@
           <div class="submit mt-3">
             <%= form.submit '登録' %>
           </div>
+
         <% end %>
       </div><br><br>
 

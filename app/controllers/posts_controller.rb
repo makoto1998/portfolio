@@ -14,10 +14,8 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @user = User.find_by(id: @post.user_id)
     @posts = Post.where(user_id: current_user.id).includes(:user).order("created_at DESC")
-    # @event = Event.new
-    # Event.create
-    # redirect_to root_path
     @events = Event.where(user_id:  @post.id)
+    @event = Event.new
   end
 
   def create
@@ -30,6 +28,8 @@ class PostsController < ApplicationController
       flash.now[:danger] = '空では登録できません'
       render :new
     end
+    @event = Event.new
+    # redirect_to root_path
   end
 
   def edit
@@ -61,4 +61,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body).merge(user_id: current_user.id)
   end
+
 end
